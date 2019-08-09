@@ -4,7 +4,9 @@ let generator = null;
 function* gen() {
   try {
     const todo1 = yield getTodos(`https://jsonplaceholder.typicode.com/todos`);
+
     console.log(todo1);
+
     const todo2 = yield getTodos(
       `https://jsonplaceholder.typicode.com/todos/66`
     );
@@ -13,7 +15,7 @@ function* gen() {
       console.log(todo2);
     }, 5000);
   } catch (error) {
-    // console.log(error);
+    console.log(error);
   }
 }
 
